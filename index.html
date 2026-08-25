@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendizados do Teste de Usabilidade | Projeto de Usabilidade</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome para Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Background Animado -->
+    <div class="background-glow glow-1"></div>
+    <div class="background-glow glow-2"></div>
+
+    <header class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-brain"></i>
+            <span>Reflexão do Projeto</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#intro">Início</a></li>
+                <li><a href="#learnings">Aprendizados</a></li>
+                <li><a href="#interactive">Simulador</a></li>
+                <li><a href="#next-steps">Próximos Passos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <!-- Hero / Introdução -->
+        <section id="intro" class="hero-section">
+            <div class="badge">Missão Concluída: Teste com Usuários</div>
+            <h1>Reflexão Pós-Teste do Protótipo</h1>
+            <p>Após apresentar o protótipo do nosso grupo para outro time e observar atentamente cada interação, comportamento e comentário, reunimos insights fundamentais para a evolução do nosso aplicativo.</p>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fa-solid fa-users"></i>
+                    <h3>1 Observação</h3>
+                    <p>Com outro time de pares</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <h3>2 Grandes Insights</h3>
+                    <p>Coletados na sessão</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fa-solid fa-rocket"></i>
+                    <h3>Próxima Versão</h3>
+                    <p>Pronta para ajustes</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção dos Aprendizados -->
+        <section id="learnings" class="learnings-section">
+            <h2><i class="fa-solid fa-list-check"></i> Principais Aprendizados Registrados</h2>
+            <p class="section-desc">Clique nos cards para expandir mais detalhes sobre o que observamos durante o teste.</p>
+
+            <div class="cards-container">
+
+                <!-- Aprendizado 1 -->
+                <div class="card" onclick="toggleCard(this)">
+                    <div class="card-header">
+                        <div class="card-tag tag-confusion">Dúvida / Organização</div>
+                        <span class="card-icon"><i class="fa-solid fa-circle-question"></i></span>
+                    </div>
+                    <h3>1. Necessidade de Clareza na Navegação da Tela Inicial</h3>
+                    <p class="summary">Os usuários hesitaram ao tentar localizar o fluxo principal do aplicativo logo no primeiro acesso.</p>
+                    
+                    <div class="card-details">
+                        <hr>
+                        <h4><i class="fa-solid fa-magnifying-glass"></i> O que observamos:</h4>
+                        <p>A pessoa que testou o protótipo passou alguns segundos procurando por onde começar a tarefa. A hierarquia visual das opções principais não estava destacada o suficiente, o que gerou uma breve confusão.</p>
+                        
+                        <h4><i class="fa-solid fa-check"></i> Impacto para o Projeto:</h4>
+                        <p>Aprendemos que elementos visuais cruciais precisam de mais contraste e direcionamento claro (CTAs visíveis). Precisamos reorganizar o layout inicial para orientar o fluxo do usuário de forma natural.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span>Clique para saber <span class="action-text">mais</span></span>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                    </div>
+                </div>
+
+                <!-- Aprendizado 2 -->
+                <div class="card" onclick="toggleCard(this)">
+                    <div class="card-header">
+                        <div class="card-tag tag-value">Valor Surpresa / Utilidade</div>
+                        <span class="card-icon"><i class="fa-solid fa-gem"></i></span>
+                    </div>
+                    <h3>2. Alto Valor Percebido na Funcionalidade de Resumo Rápido</h3>
+                    <p class="summary">A funcionalidade de visualização simplificada superou as expectativas de utilidade do usuário.</p>
+                    
+                    <div class="card-details">
+                        <hr>
+                        <h4><i class="fa-solid fa-magnifying-glass"></i> O que observamos:</h4>
+                        <p>O usuário elogiou espontaneamente o painel de resumo antes mesmo de concluir a tarefa. O que achávamos ser apenas um detalhe secundário revelou-se o recurso mais atraente da ideia.</p>
+                        
+                        <h4><i class="fa-solid fa-check"></i> Impacto para o Projeto:</h4>
+                        <p>Decidimos dar destaque central a essa funcionalidade nas próximas iterações do aplicativo, expandindo os dados apresentados nessa área.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span>Clique para saber <span class="action-text">mais</span></span>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Seção Interativa / Simulador de Feedback -->
+        <section id="interactive" class="interactive-section">
+            <h2><i class="fa-solid fa-sliders"></i> Laboratório de Feedback Iterativo</h2>
+            <p>Selecione um aspecto observado no teste para ver como ele se traduz em ação prática de design:</p>
+
+            <div class="interactive-box">
+                <div class="controls">
+                    <button class="filter-btn active" onclick="filterInsight('all')">Todos</button>
+                    <button class="filter-btn" onclick="filterInsight('ux')">Navegação & UX</button>
+                    <button class="filter-btn" onclick="filterInsight('feature')">Funcionalidades</button>
+                </div>
+
+                <div class="insight-display" id="insightDisplay">
+                    <div class="display-content" id="displayContent">
+                        <i class="fa-solid fa-hand-pointer placeholder-icon"></i>
+                        <p>Clique nos botões acima para simular a análise dos dados do teste.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Próximos Passos -->
+        <section id="next-steps" class="next-steps-section">
+            <h2><i class="fa-solid fa-route"></i> Matriz de Ação para o Protótipo</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Área do Protótipo</th>
+                            <th>Diagnóstico do Teste</th>
+                            <th>Ação Corretiva/Melhoria</th>
+                            <th>Prioridade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Dashboard / Início</td>
+                            <td>Confusão no primeiro ponto de contato.</td>
+                            <td>Redesenhar hierarquia de botões e fluxo.</td>
+                            <td><span class="badge-prio prio-high">Alta</span></td>
+                        </tr>
+                        <tr>
+                            <td>Painel de Resumo</td>
+                            <td>Entendido facilmente e muito valorizado.</td>
+                            <td>Tornar tela central no ecossistema da aplicação.</td>
+                            <td><span class="badge-prio prio-medium">Média</span></td>
+                        </tr>
+                        <tr>
+                            <td>Onboarding</td>
+                            <td>Falta de explicação rápida inicial.</td>
+                            <td>Adicionar tour de 3 passos explicativos.</td>
+                            <td><span class="badge-prio prio-high">Alta</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Registro de Aprendizados do Projeto | Desenvolvido para o GitHub</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
